@@ -1,0 +1,6 @@
+[package]
+name = "genetic_string_creator"
+version = "0.1.0"
+authors = ["benbo"]
+
+[dependencies]

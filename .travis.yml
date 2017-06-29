@@ -8,7 +8,7 @@ before_install:
 - export PATH=$PATH:$HOME/.local/bin
 script:
 - eval $(aws ecr get-login --region us-west-2)
-- docker build -t genetic-string-creator .
+- docker-compose build
 - docker tag genetic-string-creator:latest 863162710520.dkr.ecr.us-west-2.amazonaws.com/genetic-string-creator:latest
 - docker push 863162710520.dkr.ecr.us-west-2.amazonaws.com/genetic-string-creator:latest
 env:

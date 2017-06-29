@@ -37,8 +37,27 @@
       <file leaf-file-name="main.rs" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main.rs">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="17">
               <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+              <folding />
+=======
+            <state relative-caret-position="255">
+              <caret line="17" column="1" lean-forward="true" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
+              <folding>
+                <element signature="e#236#237#0" expanded="true" />
+                <element signature="e#275#276#0" expanded="true" />
+              </folding>
+>>>>>>> helloword-basic
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="travis.yml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/travis.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -58,6 +77,8 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/genetic_string_creator.iml" />
+        <option value="$PROJECT_DIR$/travis.yml" />
+        <option value="$PROJECT_DIR$/src/main.rs" />
       </list>
     </option>
   </component>
@@ -137,7 +158,29 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Cargo Command.Test main::tests">
+    <configuration default="false" name="Test main::tests" type="CargoCommandRunConfiguration" factoryName="Cargo Command" temporary="true" show_console_on_std_err="false" show_console_on_std_out="false">
+      <parameters>
+        <option name="additionalArguments">
+          <list>
+            <option value="--package" />
+            <option value="genetic_string_creator" />
+            <option value="--bin" />
+            <option value="genetic_string_creator" />
+            <option value="tests" />
+          </list>
+        </option>
+        <option name="backtraceMode" value="2" />
+        <option name="channel" value="0" />
+        <option name="command" value="test" />
+        <option name="environmentVariables">
+          <map />
+        </option>
+        <option name="nocapture" value="true" />
+      </parameters>
+      <module name="genetic_string_creator" />
+      <method />
+    </configuration>
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
       <module name="" />
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
@@ -541,6 +584,14 @@
     <configuration default="true" type="osgi.bnd.run" factoryName="Test Launcher (JUnit)">
       <method />
     </configuration>
+    <list size="1">
+      <item index="0" class="java.lang.String" itemvalue="Cargo Command.Test main::tests" />
+    </list>
+    <recent_temporary>
+      <list size="1">
+        <item index="0" class="java.lang.String" itemvalue="Cargo Command.Test main::tests" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
@@ -552,12 +603,13 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1498527756786</updated>
-      <workItem from="1498527760591" duration="183000" />
+      <workItem from="1498527760591" duration="1414000" />
+      <workItem from="1498696231718" duration="1410000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="183000" />
+    <option name="totallyTimeSpent" value="2824000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1551" y="0" width="1896" height="1407" extended-state="0" />
@@ -623,7 +675,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+<<<<<<< HEAD
           <folding />
+=======
+          <folding>
+            <element signature="e#236#237#0" expanded="true" />
+            <element signature="e#275#276#0" expanded="true" />
+          </folding>
+>>>>>>> helloword-basic
         </state>
       </provider>
     </entry>
@@ -663,6 +722,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="17" column="1" lean-forward="true" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
+<<<<<<< HEAD
           <folding />
         </state>
       </provider>
@@ -688,6 +748,12 @@
         <state relative-caret-position="17">
           <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
           <folding />
+=======
+          <folding>
+            <element signature="e#236#237#0" expanded="true" />
+            <element signature="e#275#276#0" expanded="true" />
+          </folding>
+>>>>>>> helloword-basic
         </state>
       </provider>
     </entry>

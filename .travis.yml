@@ -1,6 +1,19 @@
 language: rust
-
 rust:
-  - stable
-  - beta
-  - nightly
+- stable
+- beta
+- nightly
+services:
+- docker
+before_install:
+- pip install --user awscli
+- export PATH=$PATH:$HOME/.local/bin
+script:
+- eval $(aws ecr get-login --region us-west-2)
+- docker-compose build
+- docker tag genetic-string-creator:latest 863162710520.dkr.ecr.us-west-2.amazonaws.com/genetic-string-creator:latest
+- docker push 863162710520.dkr.ecr.us-west-2.amazonaws.com/genetic-string-creator:latest
+env:
+  global:
+  - secure: G4OU761+/EluIMFx5witkFE9nR/ePtXOLBLdFgKQBv/l3xBo/HnOpGpPUrt+nXfP0nsyC9csop0QjBaIlef5cVOyYy8bXBDlaWr5e83RT6+IG+y3SOIlNqpBLk5bn3PJWxBKhAHqq8/TWmNMAiTRrE6QbDBGO8iYy+wKfmud/OlcsAmMLvShihia9JYq4RklovinSKhZ03VrL6h27l6t72E/gCJTuj7eplMlsZMo90YoCz3hRPXmf6OamjbIqMvULF7nVc82YDyFROJFu2RjdIrBQ13blCO+ZGcC84vPkGjPepwRA70M+pDFaxT/zN02Df421vYGDVS4cY5s5zKozXTOwyw3EQqvbJ/1AKaBRDOlGFWVDS7quYtYFq4xAoCl31qL8El4T2pHh065/ZV4q/e7d3baQzCKQY7sxE78kOWBRBYXO65TUnXZTlZPqiqRDubut3uaPcd5smva/N3d5ZfSqPpWR83Y4iZV9UNwQdwYS/m5j61j026/9BiWOS0YwL6QAVhp5/pKxGCYY7FBi/xNDZBRgTTAVePZhs5mFGQNQVcxinCQMA7/32SI38G05fxCDfSb4T8rnAdopFzqwFoTQR6tg1Ahpoydp8x5BBnN6oRV4e69szYPgC0o/UwSHxMpHjf6RNAkx/hav6prD8BGnNUUi6+kx6LDSqAx768=
+  - secure: oONB7cB/9Kb3kaxBodua/5oZmNlmOmmPhTlu4DExWBepEjcdhFArvbQk6RJCDeK1U6YTtX2xoG7CH6O0TuPSWN4a6jq2iGiIhtQbU/u8nDLRz6cmI5VLwadeG7QhKGHtc7KJDreEw1QnWqL+5baYKwCY5TMrrn6coFP49yxC+DbF3g+Ld31mbOaHGTJWyesR+M6kL8gWFnvPlUZ4KTW5WKTWKqAYEQK7d3/WeTp1IPFZGBzKYHmIPwMPT0tba+QBo49/IFDVtu1IiC2EtLNId/n5wHuUvdlOHsjGXJqmKuaNy4o2j2Z6OWHtHLzb10ZOyuYH3pqM/tw+PjGZHL0CcdCTV6pj1OCVGtOV0+UMGdZl9tL+JDoFNgFAtQHZ/vjUKtsx8BgdOMrzaai/37W0xrLXAmK4b00IMVKkcms9ik8plLczyglP6rjhBkwSgsy+7A/Cbe8UQJBRRHyybkwTwC3xE97EPYM/p+gE/AsQ3eOuIK41FwA3QP4dG/r2sP6bZm/C9sYAdsXyLy2AJoUtVYknQlnyyGojhgQF0yJTBXfmI/VUqFTc8vtTPeVIXe9HrW8wFzeokEngZZkIX5PGVdOU3lQmmxpusuhrm6W7qVvARBuvvzFmWG9FWyyDMT6hQXjXR8r3q6dnc/KEZpS2EB5+OlUdwPfQkSIQMJeqRfs=
